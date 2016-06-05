@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+</head>
+<script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
+
+<style>
+
+
+</style>
+<body>
+Welcome to your blogs !
+<br><br>
+
+
+<div id="bloglist">
+    <ul class="individualblog">
+        <% for(var i = 0; i < individualblog.length; i++) { %>
+        <li class="quote">
+            <p><%= individualblog[i].blog_data %></p>
+        </li>
+        <% } %>
+    </ul>
+</div>
+
+
+
+</body>
+</html>

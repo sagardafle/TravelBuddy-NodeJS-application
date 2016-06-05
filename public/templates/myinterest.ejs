@@ -1,0 +1,60 @@
+<div ng-controller="myinterestCtrl">
+<div class="col-md-12 ser-grid">
+<h4>Your interest in Idaho</h4></br>
+
+<div>
+    <div class="row">
+    
+    <div class="col-md-4">   
+         By City: <select ng-options="citiname.value for citiname in cities.citiname" ng-model="city"></select><br><br>
+	 </div>
+	 
+	  <div class="col-md-4">   
+         By Activities: <select ng-options="categoryname.value for categoryname in activities.categoryname" ng-model="activity"></select><br><br>
+	 </div>
+	 
+	 
+	 <div class="col-md-4">
+	     Budget: <select name="singleSelect" id="singleSelect" ng-model="budget">
+	     <option value="" disabled selected style="display: none;">Please select your budget</option>
+	      <option  selected="selected" value="low">$</option>
+	      <option value="average">$$</option>
+	      <option value="high">$$$</option>
+	    </select><br> </br>
+	 </div>
+	 
+	 </div>
+	 
+	 <div class="row">
+	 <div class="col-md-3">
+	    <button type="button" ng-click="submit(city,activity,budget)" class="btn btn-primary">Submit</button>
+	 </div> 
+	 </div>
+	    </br></br>
+
+	<table class="table">
+			<tr>
+				<th>City
+				</th>
+				<th>Activity
+				</th>
+				<th>Budget
+				</th>
+			</tr>
+			<tr ng-repeat="data in interest">
+				<td>{{data.city.value}}
+				</td>
+				<td>{{data.activity.value}}
+				</td>
+				<td>{{data.budget}}
+				</td>
+				<td ng-mouseover="showCollegeList()"><a href data-toggle="popover" title= {{data.college}} data-content="More stuff here.." data-trigger="hover">{{data.prob}}</a>
+				</td>
+			</tr>
+		</table>
+
+</div>
+
+</div>
+
+</div>

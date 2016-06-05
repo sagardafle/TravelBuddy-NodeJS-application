@@ -1,0 +1,148 @@
+<!-- views/login.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src= "/js/register.js"></script>
+    
+    
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body ng-app="app" background="/images/id1.jpg" style="background-repeat: no-repeat;background-size: 2000px 800px;">
+<div container class="well" style="padding:auto">	
+
+	    
+ <h1 style="font-family: fantasy; margin-left: inherit;"> Travel Buddy</h1>
+ <br>
+ <div class="col-md-6">
+<div ng-controller="regCtrl">
+
+<form class="form-horizontal" name="userForm" ng-submit="registration()">
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fn">Email Address</label>  
+  <div class="col-md-4">
+  <input id="fn" name="fn" type="text" placeholder="Please provide Email Address" ng-model="user.emailaddress" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fn">First Name</label>  
+  <div class="col-md-4">
+  <input id="fn" name="fn" type="text" placeholder="Please provide first name" ng-model="user.firstname" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fn">Last Name</label>  
+  <div class="col-md-4">
+  <input id="fn" name="fn" type="text" placeholder="Please provide last name" ng-model="user.lastname" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ln">Password</label>  
+  <div class="col-md-4">
+  <input id="ln" name="ln" type="password" placeholder="Please provide Password" ng-model="user.password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cmpny">Confirm Password</label>  
+  <div class="col-md-4">
+  <input id="cmpny" name="cmpny" type="password" placeholder="Please confirm your password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="phone">Text InputPhone</label>  
+  <div class="col-md-4">
+  <input id="phone" name="phone" type="text" placeholder="Please provide phone number" ng-model="user.phone" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="phone">Your Profile Picture</label>  
+  <div class="col-md-4">
+  <input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+    
+  </div>
+</div>
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
+</div>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+<div class="col-md-6" >
+<div class="col-sm-6 col-sm-offset-3" id="login">
+ 
+      <h1 style="font-size: 25px;font-family: fantasy;">Sign in</h1>
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post">
+    
+     <img class="pull-left" >
+     <div align="right">
+        <div class="form-group,clearfix">
+            <label>Email Address</label>&nbsp;
+            <input type="text" class="form-control,clearfix" name="username">
+        </div>
+        &nbsp;
+        <div class="form-group,clearfix">
+            <label>Password</label>&nbsp;
+            <input type="password" class="form-control,clearfix" name="password">
+        </div>
+        
+        <hr>
+        <br>
+        <div>
+        <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1" class="uiInputLabelInput uiInputLabelCheckbox"/>
+        <label for="persist_box" class="uiInputLabelLabel">Remember Me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+     </div>
+        
+    </form>
+</div>
+</div>
+
+
+</div>
+</div>
+
+</body>
+</html>

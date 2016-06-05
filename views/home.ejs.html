@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>    	
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    	<link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.js"></script>
+   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   		<script src="http://code.highcharts.com/highcharts.src.js"></script>
+   		    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js?2'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+    
+    
+    
+    <script src="https://rawgithub.com/pablojim/highcharts-ng/master/src/highcharts-ng.js"></script>
+   	<script src= "/js/home.js"></script>
+   	<script src = "/services/cities.js"></script>
+   	<script src = "/services/categories.js"></script>
+ 
+	</head>
+	
+    <body ng-controller="ctrl1" background="/images/id1.jpg" style="background-repeat: no-repeat;background-size: 2000px 800px;">
+   
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+ 		<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#">Travel Buddy</a>
+      	</a>
+      
+    	
+  	 </div>
+  	<div class="navbar-collapse collapse"> 
+  	 <ul class="nav navbar-nav navbar-right">
+      	<li><a href="#about">Signout</a></li>
+    </div>
+ </div>
+	</nav>	
+	<br><br><br><br><br>
+	<div container>	
+	    <div class="well" style="padding:auto" >
+	     <div class="row">
+	     <div class="col-md-3 ser-grid">
+			<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+				  <a href="#/profile" class="hi-icon glyphicon glyphicon-stats"><h4>My Profile</h4></a>
+				<p>Add more to your profile</p>
+			</div>
+		</div>
+	    <div class="col-md-3 ser-grid">
+			<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+				  <a href="#/blogs" class="hi-icon glyphicon glyphicon-stats"><h4>My Blogs</h4></a>
+				<p>Share about your amazing trips with the world </p>
+			</div>
+		</div>
+		<div class="col-md-3 ser-grid">
+			<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+				<a href="#/myinterest" class="hi-icon glyphicon glyphicon-star">
+				<h4>My Travel Interest</h4></a>
+				<p>You tell us about your travel interest and we will find best travel companions for you to create beautiful memories</p>
+			</div>
+		</div>
+		<div class="col-md-3 ser-grid">
+			<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+				<a href="#/findmybuddy" class="hi-icon glyphicon glyphicon-star">
+				<h4>Find Buddy</h4></a>
+				<p>Know the probability with which you can repay your debt based on particular factors.</p>
+			</div>
+		</div>
+		
+		
+		
+    <div ng-view></div>
+    </div>
+    </div>
+ 
+    </body>
+</html>
